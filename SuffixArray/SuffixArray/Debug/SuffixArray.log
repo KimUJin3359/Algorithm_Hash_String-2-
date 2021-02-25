@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\u jin\source\repos\suffixarray\suffixarray\main.cpp(27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\u jin\source\repos\suffixarray\suffixarray\main.cpp(40): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\u jin\source\repos\suffixarray\suffixarray\main.cpp(43): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  SuffixArray.vcxproj -> C:\Users\U JIn\source\repos\SuffixArray\Debug\SuffixArray.exe

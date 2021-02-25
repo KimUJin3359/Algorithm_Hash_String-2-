@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\u jin\source\repos\rabinkarp\rabinkarp\main.cpp(61): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  RabinKarp.vcxproj -> C:\Users\U JIn\source\repos\RabinKarp\Debug\RabinKarp.exe
