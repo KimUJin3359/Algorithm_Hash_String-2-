@@ -1,4 +1,4 @@
-# Algorithm_String-2-
+# Algorithm_Hash_String-2-
 
 ### Hashing
 - 특정 항목을 검색하고자 할 때, 탐색키를 이용한 산술적 연산을 이용해 키가 있는 위치를 계산하여 바로 찾아가는 방법
