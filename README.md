@@ -92,11 +92,48 @@
 - 저장 공간 및 데이터 전송 시간의 절약
 - 주요 압축 기법들
   - Run-Length Encoding
+    - 동일한 값이 몇 번 반복되는가를 나타내는 방식
+    - Run : 반복되는 문자
+    - Length : 반복 횟수
+    - 이미지 파일 포맷인 BMP 파일 포맷의 압축 방법으로 사용
   - Huffman Coding
   - Lampel-Ziv-Welch Encoding
   - Arithmetic Coding
 - 인코딩(encoding) : 데이터를 압축
 - 디커딩(decoding) : 데이터를 복구
-- 압축률 : 
+- 압축률 : 압축 데이터 비트 수 / 원본의 비트 수
+- 손실/무손시 압축으로 구분
  
-
+### Huffman Coding
+- 허프만이 1950년 고안한 데이터 압축 알고리즘
+- 기호의 빈도 : 전체 데이터 안에서 차지하는 기호의 비율
+  - 고정 길이 코드 : 기호에 대응하는 코드값의 길이가 똑같은 코드체계(Ascii 등)
+  - 접두어 코드 : 가변 길이 코드의 한 종류로 어느 코드가 다른 코드의 접두어가 되지 않는 코드체계
+- 허프만 트리 : 각 기호에 이진 코드를 부여하기 위해 생성하는 이진 트리
+  - 탐욕 알고리즘 기법에 의해 허프만 트리를 생성
+  - 노드 규칙 : 잎 노드는 기호와 빈도를 저장하고 부모 노드는 빈도만 저장
+   
+#### 관련 문제
+- [1.GNS](https://github.com/KimUJin3359/Algorithm_Hash_String-2-/blob/master/GNS/GNS/main.cpp)
+  - [문제](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AXc2524K9JYDFAWs&contestProbId=AV14jJh6ACYCFAYD&probBoxId=AXfXV7m6svIDFAUO&type=PROBLEM&problemBoxTitle=Day+13%28String%29&problemBoxCnt=3)
+  - 0 ~ 9 값을 "ZRO", "ONE", "TWO", ..., "NIN"에 매칭
+  - 0 ~ 9 값을 나타내는 단어가 섞여 있는 문자열을 받아 작은 수부터 차례로 정렬하여 출력하는 프로그램
+  - 접근 방법
+    - minimum priority queue 사용
+- [2.KthSuffix](https://github.com/KimUJin3359/Algorithm_Hash_String-2-/blob/master/KthSuffix/KthSuffix/main.cpp)
+  - [문제](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AXc2524K9JYDFAWs&contestProbId=AV18GHd6IskCFAZN&probBoxId=AXfXV7m6svIDFAUO&type=PROBLEM&problemBoxTitle=Day+13%28String%29&problemBoxCnt=3)
+  - 영어 소문자로 된 문자열이 존재
+  - 그로부터 파생되는 접미어들을 사전적으로 정렬했을 경우, k 번째 존재하는 접미어 찾기
+  - 접근 방법
+    - Suffix Array 개념 적용
+    - 문자열의 맨 마지막에 $를 붙임
+    - 접미어 배열을 만들고, 그를 정렬
+[3.KthString](https://github.com/KimUJin3359/Algorithm_Hash_String-2-/blob/master/KthString/KthString/main.cpp)
+  - [문제](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AXc2524K9JYDFAWs&contestProbId=AV18KWf6ItECFAZN&probBoxId=AXfXV7m6svIDFAUO&type=PROBLEM&problemBoxTitle=Day+13%28String%29&problemBoxCnt=3)
+  - 영어 소문자로 된 문자열이 존재
+  - 부분 문자열은 문자열의 두 위치를 골라서, 이 사이의 연속한 문자열을 뽑아내서 만듬
+  - 이를 사전적으로 정렬했을 경우, k 번째 존재하는 단어 찾기
+  - 접근 방법
+    - 문자열을 뽑아내 vector를 구성
+    - 중복을 제거하고, 정렬
+    - 
